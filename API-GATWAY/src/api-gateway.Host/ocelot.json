@@ -1,0 +1,49 @@
+﻿{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/student",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5882
+        }
+      ],
+      "UpstreamPathTemplate": "/student",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "Key": "student"
+    },
+    {
+      "DownstreamPathTemplate": "/user",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5782
+        }
+      ],
+      "UpstreamPathTemplate": "/user",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "Key": "user"
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "IdentityApiKey",
+      //  "AllowedScopes": []
+      //}
+    }
+
+  ],
+  "Aggregates": [
+    {
+      "ReRouteKeys": [
+        "student",
+        "user"
+      ],
+      "UpstreamPathTemplate": "/everything"
+    }
+  ],
+  "GlobalConfiguration": {
+    //"RequestIdKey": "OcRequestId",
+    //"AdministrationPath": "/administration",
+    "BaseUrl": "https://localhost:5001"
+  }
+}

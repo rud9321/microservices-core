@@ -5,5 +5,12 @@
     <RootNamespace>api_gateway.Host</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="ocelot" Version="14.1.0" />
+  </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
 </Project>

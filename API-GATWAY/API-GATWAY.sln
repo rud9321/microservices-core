@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5891D83A-7293-435F-AE9A-B79DA29BFE4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api-gateway.Host", "src\api-gateway.Host\api-gateway.Host.csproj", "{03607461-D141-47DB-8AF1-9B0642D212F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api-gateway", "src\api-gateway.Host\api-gateway.csproj", "{03607461-D141-47DB-8AF1-9B0642D212F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

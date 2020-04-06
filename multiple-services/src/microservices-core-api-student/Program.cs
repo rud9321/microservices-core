@@ -20,8 +20,7 @@ namespace microservices_core_api_student
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>()
-                    .UseUrls("http://localhost:5881;https://localhost:5882");
+                    webBuilder.UseStartup<Startup>();
                 });
     }
 }

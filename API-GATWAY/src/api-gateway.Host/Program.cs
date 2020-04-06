@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace api_gateway.Host
+namespace api_gateway
 {
     public class Program
     {
@@ -21,6 +21,9 @@ namespace api_gateway.Host
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                }).ConfigureAppConfiguration((host, config) =>
+                {
+                    config.AddJsonFile("ocelot.json");
                 });
     }
 }

@@ -20,7 +20,8 @@ namespace microservices_core_api_user
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>().UseUrls("http://localhost:5781;https://localhost:5782");
+                    webBuilder.UseStartup<Startup>();
+                    //.UseUrls("http://localhost:5781;https://localhost:5782");
                 });
     }
 }
