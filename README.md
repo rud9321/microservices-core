@@ -48,7 +48,7 @@ dotnet add package ocelot
 |--|--|
 |`https://localhost:5782/user`| Execute the user API(service) |
 |`https://localhost:5882/student`| Execure the student API(service) |
-|`https://localhost:5001/`| Execute your api gateway |
+|`https://localhost:5001/everything`| Execute your api gateway |
 
 
 ## Branch & Packages version
