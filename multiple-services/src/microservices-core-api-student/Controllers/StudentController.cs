@@ -2,27 +2,26 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace microservices_core_api_student.Controllers
-{
+namespace microservices_core_api_student.Controllers {
     [ApiController]
-    [Route("[controller]")]
-    public class StudentController : ControllerBase
-    {
+    [Route ("[controller]")]
+    [Authorize]
+    public class StudentController : ControllerBase {
         [HttpGet]
-        public IActionResult Get()
-        {
-            var result = new
-            {
+        public IActionResult Get () {
+            var result = new {
                 rollno = 21,
                 studentid = "rud",
                 name = "Rudra",
                 password = "123$"
 
             };
-            return Ok(result);
+            return Ok (result);
         }
     }
 }
